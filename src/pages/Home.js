@@ -12,7 +12,7 @@ function Home() {
       </div>
       <div className="home__main">
         <Main />
-        {/* <Login /> */}
+        <Login />
         <ListDetail />
       </div>
     </div>

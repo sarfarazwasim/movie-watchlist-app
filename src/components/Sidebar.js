@@ -1,5 +1,6 @@
 import './Sidebar.scss'
 import Search from './Search';
+import Watchlist from './Watchlist';
 
 function Sidebar() {
   const item = {
@@ -18,13 +19,7 @@ function Sidebar() {
         My Lists
         <br></br>
         <br></br>
-        {
-          rows.map(function (i) {
-            return <div className='sidebar__list--item'>
-            {i.name}
-          </div>;
-          })
-        }
+        <Watchlist />
       </div>
     </div>
   );
