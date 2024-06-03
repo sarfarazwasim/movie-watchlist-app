@@ -1,0 +1,32 @@
+.login {
+  &__box {
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 32px;
+    font-size: 18px;
+    max-width: 420px;
+    margin: 32px auto;
+    &--input {
+      border: none;
+      border-bottom: 1px solid gray;
+      outline: none;
+      width: 100%;
+      padding: 0;
+      height: 32px;
+      &:focus {
+        border-bottom: 1px solid crimson;
+      }
+    }
+    &--btn {
+      margin-top: 32px;
+      width: 100%;
+      padding: 8px 0;
+      color: white;
+      background-color: crimson;
+      border: 1px solid crimson;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.sidebar {
+  &__heading {
+    color: red;
+    text-align: center;
+  }
+  &__list {
+    font-weight: bold;
+    &--item {
+      font-weight: normal;
+      cursor: pointer;
+      padding: 8px 12px;
+      border: 1px solid rgb(183, 183, 183);
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+  }
+}

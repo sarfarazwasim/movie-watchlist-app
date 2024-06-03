@@ -1,0 +1,29 @@
+.search {
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 4px;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-bottom: 24px;
+  &__icon {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    border: none;
+    outline: none;
+    width: calc(100% - 32px - 80px);
+  }
+  &__button {
+    height: 100%;
+    background-color: crimson;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
