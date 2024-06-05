@@ -1,20 +1,26 @@
-import './App.css';
-import Home from './pages/Home'
+import './App.scss';
+import Sidebar from './components/Sidebar';
+// import Home from './pages/Home'
 import store from './store/index';
 import { Provider } from 'react-redux'
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-        </header> */}
-        <Home />
+    <div className='App'>
+      <div className="home">
+        <div className="home__sidebar">
+          <Sidebar />
+        </div>
+        <div className="home__main">
+          <Outlet />
+          {/* <Main />
+          <Login />
+          <ListDetail /> */}
+        </div>
       </div>
+    </div>
     </Provider>
   );
 }

@@ -1,7 +1,11 @@
 .sidebar {
+  // height: calc(100% - 40px);
+  // border: 1px solid red;
+  position: relative;
   &__heading {
     color: red;
     text-align: center;
+    cursor: pointer;
   }
   &__list {
     font-weight: bold;
@@ -12,6 +16,29 @@
       border: 1px solid rgb(183, 183, 183);
       border-radius: 4px;
       margin-bottom: 4px;
+    }
+  }
+  &__profile {
+    position: fixed;
+    bottom: 20px;
+    width: 210px;
+    border: 1px solid rgb(183, 183, 183);
+    // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: white;
+    &--logout {
+      padding: 8px;
+      color: white;
+      text-align: center;
+      background-color: crimson;
+      border: 1px solid crimson;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      cursor: pointer;
     }
   }
 }

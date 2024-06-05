@@ -7,4 +7,12 @@
     font-weight: bold;
     margin-bottom: 8px;
   }
+  &__desc-text {
+    margin-bottom: 24px;
+  }
+  &__list {
+    display: flex;
+    gap: 24px 12px;
+    flex-wrap: wrap;
+  }
 }

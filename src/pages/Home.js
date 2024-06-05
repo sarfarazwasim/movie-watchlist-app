@@ -11,9 +11,9 @@ function Home() {
         <Sidebar />
       </div>
       <div className="home__main">
-        <Main />
+        {/* <Main />
         <Login />
-        <ListDetail />
+        <ListDetail /> */}
       </div>
     </div>
   );

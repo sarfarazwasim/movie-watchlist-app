@@ -1,17 +1,22 @@
 import './Sidebar.scss'
 import Search from './Search';
 import Watchlist from './Watchlist';
+import { useSelector } from 'react-redux'
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
-  const item = {
-    name: 'Movie by Tom',
-    description: 'This is the description',
-    list: []
+  const id = useSelector((state) => state.movie.userId)
+  const navigate = useNavigate()
+  function redirectToHome () {
+    navigate('/')
   }
-  const rows = [item, item, item, item]
+  function handleLogout() {
+    localStorage.removeItem('userId')
+    navigate('/login')
+  }
   return (
     <div className="sidebar">
-      <h1 className="sidebar__heading">Watchlists</h1>
+      <h1 className="sidebar__heading" onClick={redirectToHome}>Watchlists</h1>
       <div>
         {/* <Search /> */}
       </div>
@@ -20,6 +25,12 @@ function Sidebar() {
         <br></br>
         <br></br>
         <Watchlist />
+      </div>
+      <div className='sidebar__profile'>
+      👤 &nbsp; {id}
+        <div className='sidebar__profile--logout' onClick={handleLogout}>
+          Logout
+        </div>
       </div>
     </div>
   );
