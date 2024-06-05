@@ -34,15 +34,12 @@ export const movieStore = createSlice({
           movies: []
         }
         if (state.watchList[state.userId]) {
-          console.log('[if log]', state.watchList[state.userId])
           state.watchList[state.userId].push(value)
         } else {
-          console.log('[in else log]', state.userId)
           state.watchList[state.userId] = []
           state.watchList[state.userId].push(value)
         }
       }
-      console.log('Final', state.watchList)
       localStorage.setItem('watchList', JSON.stringify(state.watchList))
     }
   },

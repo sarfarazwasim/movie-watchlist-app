@@ -31,7 +31,6 @@ function Watchlist({isSelection, movie, handleListClick}) {
   const [selectedList, setSelectedList] = useState(-1);
 
   function handleListSelection (index) {
-    console.log('[log] hello', index)
     if (isSelection === 'true') {
       setSelectedList(index)
       handleListClick(index)

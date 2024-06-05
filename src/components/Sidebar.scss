@@ -1,9 +1,7 @@
 .sidebar {
-  // height: calc(100% - 40px);
-  // border: 1px solid red;
   position: relative;
   &__heading {
-    color: red;
+    color: crimson;
     text-align: center;
     cursor: pointer;
   }
@@ -23,7 +21,6 @@
     bottom: 20px;
     width: 210px;
     border: 1px solid rgb(183, 183, 183);
-    // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     display: flex;
     justify-content: space-between;

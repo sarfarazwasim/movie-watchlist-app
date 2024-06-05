@@ -24,7 +24,6 @@ function Card({movie, isDetail, id, movieIndex}) {
   const [selectedListIndex, setSelectedListIndex] = useState(-1);
 
   function handleListClick (index) {
-    console.log('[in card emit]')
     setSelectedListIndex(index)
   }
 

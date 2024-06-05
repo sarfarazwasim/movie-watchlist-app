@@ -1,3 +1,7 @@
+# Watchlist - Create your personal movie watch list
+
+Search for movies and them to your watch list. You can create multiple watchlists. Not only you, your friends can also login to their profile and save their own watch lists
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

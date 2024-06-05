@@ -15,7 +15,6 @@ function Search() {
   function fetchMovies () {
     axios.get(`http://www.omdbapi.com/?s=${searchTerm}&apikey=62394e84`)
     .then((res) => {
-      console.log('[log]', res.data.Search)
       dispatch(setMovieList(res.data.Search))
     })
   }
