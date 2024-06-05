@@ -1,8 +1,8 @@
 import './Main.scss'
 import Card from './Card';
 import Search from './Search';
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux'
 import { useNavigate } from "react-router-dom";
 
 function Main() {
@@ -10,17 +10,10 @@ function Main() {
   const id = useSelector((state) => state.movie.userId)
   useEffect(() => {
     if (!id) {
-      console.log('[my id 2]', id)
       navigate('/login')
     }
-  }, [id]);
-  console.log('[my id]', id)
-  if (!id) {
-  console.log('[my id 2]', id)
-  navigate('/login')
-  }
+  });
   const movieList = useSelector((state) => state.movie.movieList)
-  const dispatch = useDispatch()
   return (
     <div className="main">
       <div className="main__heading">

@@ -1,5 +1,4 @@
 import './Sidebar.scss'
-import Search from './Search';
 import Watchlist from './Watchlist';
 import { useSelector } from 'react-redux'
 import { useNavigate } from "react-router-dom";

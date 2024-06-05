@@ -2,7 +2,7 @@ import { setWatchList } from '../store/movieStore';
 import './Card.scss'
 import Watchlist from './Watchlist';
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 function Card({movie, isDetail, id, movieIndex}) {
   function openSelection () {
@@ -44,6 +44,7 @@ function Card({movie, isDetail, id, movieIndex}) {
       </div>
       <div className='card__details'>
         {/* <div className='card__details--score'>⭐ {movie.Metascore} <div className='hundred-score'>&nbsp; / 100</div></div> */}
+        {/* Score details are not coming in search API response */}
         <div className='card__details--name'>{movie.Title}</div>
         <span className='card__details--year'>({movie.Year})</span>
       </div>

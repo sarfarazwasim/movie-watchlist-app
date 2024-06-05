@@ -1,5 +1,5 @@
 import './Watchlist.scss'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { setWatchList } from '../store/movieStore'
 import { useNavigate } from "react-router-dom";
@@ -60,10 +60,6 @@ function Watchlist({isSelection, movie, handleListClick}) {
       <div className='watchlist__create' onClick={() => setShowCreateModal(true)}>
         Create Watchlist
       </div>
-      {/* <br />
-      <div className='card__submit' onClick={() => handleSubmit()}>
-        Submit
-      </div> */}
       { showCreateModal &&
       <div className='watchlist__modal'>
         <div className='watchlist__modal--content'>
@@ -79,9 +75,10 @@ function Watchlist({isSelection, movie, handleListClick}) {
             <textarea rows="6" placeholder='Enter watchlist description'
               value={watchlistDescription} onChange={handleDescChange}/>
           </div>
-          <div className='watchlist__create' onClick={() => handleCreate()}>
+          { watchlistName.trim() && <div className='watchlist__create' onClick={() => handleCreate()}>
             Create
           </div>
+          }
         </div>
       </div>
       }

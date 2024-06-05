@@ -1,12 +1,11 @@
 import './Login.scss'
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setUserId } from '../store/movieStore'
 import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState('');
-  const id = useSelector((state) => state.movie.userId)
   const dispatch = useDispatch()
 
   const handleChange = (event) => {

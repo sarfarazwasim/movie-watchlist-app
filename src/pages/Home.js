@@ -1,8 +1,5 @@
 import './Home.scss'
 import Sidebar from '../components/Sidebar'
-import Main from '../components/Main'
-import Login from '../components/Login'
-import ListDetail from '../components/ListDetail'
 
 function Home() {
   return (

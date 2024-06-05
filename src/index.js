@@ -10,9 +10,7 @@ import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
-  RouterProvider,
-  BrowserRouter as Router ,
-  Route
+  RouterProvider
 } from "react-router-dom";
 
 

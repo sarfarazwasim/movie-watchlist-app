@@ -1,8 +1,7 @@
 import './ListDetail.scss'
 import Card from './Card';
-import Search from './Search';
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import React, {} from 'react';
+import { useSelector } from 'react-redux'
 import { useParams } from 'react-router';
 
 function ListDetail() {

@@ -1,12 +1,11 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setMovieList } from '../store/movieStore'
 import './Search.scss'
 
 function Search() {
   const [searchTerm, setSearchTem] = useState('');
-  // const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
 
   const handleChange = (event) => {
