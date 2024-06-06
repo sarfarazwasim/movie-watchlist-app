@@ -13,9 +13,18 @@ function Search() {
   };
 
   function fetchMovies () {
-    axios.get(`http://www.omdbapi.com/?s=${searchTerm}&apikey=62394e84`)
+    const headers = {
+      // 'Access-Control-Allow-Origin': '*',
+      // "Content-Type": "application/json"
+      }
+    const url = `https://www.omdbapi.com/?s=${searchTerm}&apikey=62394e84`
+    axios.get(url,  {headers})
     .then((res) => {
-      dispatch(setMovieList(res.data.Search))
+      if (res.data.Search) {
+        dispatch(setMovieList(res.data.Search))
+      } else {
+        alert(res.data.Error)
+      }
     })
   }
   return (
